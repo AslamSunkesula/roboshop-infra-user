@@ -28,7 +28,7 @@ resource "aws_ssm_parameter" "database_subnet_ids" {
 resource "aws_ssm_parameter" "allow_all_security_group_Id" {
   name  = "/roboshop/dev/allow_all_security_group_Id"
   type  = "String"
-  value = local.securitygroup
+  value = local.allow_all_security_group_id
 }
 
 
