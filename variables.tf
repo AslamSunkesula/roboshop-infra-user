@@ -34,3 +34,17 @@ variable "database_subnet_cidr" {
 }
 
 
+variable "sg_ingress_rules" {
+
+    default = [
+        {
+            description = "allow the all trafic from the internet "
+            from_port = 0
+            to_port = 0
+            cidr_blocks = ["0.0.0.0/0"]
+            protocol = " -1 "
+        }
+    ]
+  
+}
+
